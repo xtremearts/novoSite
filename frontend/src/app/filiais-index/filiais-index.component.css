@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.filiais-index{
+    margin: 3% 0;
+    padding: 0 3%;
+}
+
+.img-filial{
+    border: solid #50992A 12px;
+    max-width: 95%;
+}
+
+
+h3{
+    font-size: 46px;
+    color: #3E821E;
+    font-weight: 300;
+    margin-top: 0.5em;
+}
+
+ul{
+    text-align: center;
+}
+
+li{
+    font-size: 27px;
+    line-height: 1.2em;
+}
+
+button{
+    padding: 0.5em 0;
+    font-size: 28.6px;
+    border: solid #50992A 2px;
+    color: #3E821E;
+    background-color: white;
+}
+
+button:hover{
+    background-color: #50992A;
+    color: white;
+}

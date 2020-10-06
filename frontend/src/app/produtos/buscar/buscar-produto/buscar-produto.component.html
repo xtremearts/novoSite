@@ -1,0 +1,28 @@
+<app-titulo-paginas [tituloPaginas]="tituloPaginas" [corTitulo]="corTitulo" [corTituloSvg]="corTituloSvg">
+</app-titulo-paginas>
+
+<div class="container-fluid mt-5 div-icones-topo">
+    <div class="col-10 corpo">
+        <app-buscar-cabecalho></app-buscar-cabecalho>
+
+        <div class="row pl-4 pr-4 mt-5">
+            <ng-container *ngFor="let produto of produtos.buscaApi; index as i">
+              <a class="col-3 link-produto-unico"
+                [routerLink]="produto.cod_nome" 
+                [id]='produto.cod_nome'
+                (click)='produtos.indexClicado(produto.cod_index);
+                produtos.exibirModal();'>
+
+                <app-produto-unico
+                    [nome]='produto.nome'
+                    [fornecedor]='produto.fornecedor'
+                    [codFornecedor]="produto.cod_fornecedor"
+                    [id]='produto.cod_nome'
+                >
+                </app-produto-unico>
+              </a>
+            </ng-container>
+        </div>
+    </div>
+</div>
+

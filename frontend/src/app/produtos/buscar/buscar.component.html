@@ -1,0 +1,8 @@
+<form>
+    <input type="text" name="name" class="col-11" [(ngModel)]='produtos.buscarProduto' placeholder="Digite aqui o código ou descrição.">
+    <a [routerLink]="['/buscar']">
+      <button class="col-1" type="buttom">
+        <img src="assets/imagens/icone_buscar.svg">
+    </button>
+    </a>
+</form>

@@ -1,0 +1,102 @@
+<div class="corpo-modal">
+  <button type="button" class="close p-2" aria-label="Close" (click)="modal.close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="row">
+    <div class="row justify-content-between corpo-produto">
+
+      <div class="imagem-produto col-6 pr-4">
+        <img *ngFor="let produto of produtos.produtosNomeApiAtivo" class="logo" [src]="'http://www.novacasadistribuidora.com/links/imagens/fornecedores/fornecedores_produtos/' + produto.cod_fornecedor + '.jpg'">
+
+
+        <ng-container *ngIf="produtos.produtosDescricaoApiIndex.length > 1  then carrousel else imagemUnica">
+        </ng-container>
+
+        <!-- template para escolher quantidade de imagens, caso seja mais que uma abrirá um carroseu -->
+        <ng-template #carrousel>
+          <ngb-carousel class="col-10">
+            <ng-container *ngFor="let imagemProdutos of produtos.produtosDescricaoApiIndex; index as i">
+              <ng-template  ngbSlide>
+                <ng-container>
+                  <img class="img-fluid"
+                    [src]="'http://www.novacasadistribuidora.com/links/imagens/produtos_alta_resolucao/'+imagemProdutos.cod_nc_img+'.jpg'">
+                </ng-container>
+              </ng-template>
+            </ng-container>
+          </ngb-carousel>
+        </ng-template>
+
+        <ng-template #imagemUnica>
+          <div class="col-10">
+            <img class="img-fluid"
+              [src]="'http://www.novacasadistribuidora.com/links/imagens/produtos_alta_resolucao/'+produtos.produtoAtivo+'.jpg'">
+            </div>
+        </ng-template>
+        <!-- --------------------------------------------------------------------------------------- -->
+
+      </div>
+      <div class="col">
+        <h1 *ngFor="let produto of produtos.produtosNomeApiAtivo">{{produto.nome}}</h1>
+        <!-- <div class="form-group form-inline">
+          <input class="form-control ml-2" type="text" [formControl]="filter"/>
+
+        </div> -->
+        <table class="table table-sm table-hover col table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>CÓD</th>
+              <th>DESCRIÇÃO</th>
+              <th>REF. FÁBRICA</th>
+              <!-- <th>MULTIPLO</th> -->
+              <th>EMBALAGEM</th>
+              <th>EAN</th>
+              <!-- <th>UNIDADE</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let produto of produtos.produtosDescricaoApi">
+              <tr>
+                  <!-- <td>
+                    <ngb-highlight [result]='produto.descricao' [term]='filter.value'></ngb-highlight>
+                  </td> -->
+
+                  <td scope="row">{{produto.id}}</td>
+                  <td>{{produto.descricao}}</td>
+                  <td>{{produto.codfab}}</td>
+                  <td>{{produto.multiplo}} {{produto.unidade}}</td>
+                  <td>{{produto.ean}}</td>
+                  <!-- <td>{{produto.ean == '' || produto.ean == 0 ? produto.ean : produto.ean2}}</td> -->
+
+                  <!-- <td appInfoWinthor [id]='produto.id'></td> -->
+              </tr>
+            </ng-container>
+
+
+
+          </tbody>
+        </table>
+
+
+      </div>
+
+
+    </div>
+    <div class="row produtos-semelhantes">
+      <h3 class="col-12">PRODUTOS SEMELHANTES</h3>
+
+      <div class="row">
+        <ng-container *ngFor="let produtosIndex of produtos.produtosNomeIndex">
+          <a class="col-3 p-2">
+            <app-produto-unico class="col-11"
+              [nome]="produtosIndex.nome"
+              [codFornecedor]="produtosIndex.cod_fornecedor"
+              [id]="produtosIndex.id">
+            </app-produto-unico>
+          </a>
+        </ng-container>
+      </div>
+
+    </div>
+  </div>
+
+</div>

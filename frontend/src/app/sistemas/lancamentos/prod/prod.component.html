@@ -1,0 +1,26 @@
+<div class="fundo p-4">
+    <h2>{{nome}}</h2>
+    <div class="position-relative mb-2 imagem-produto">
+        <img class="img-produto img-fluid" [src]="'http://localhost/site/links/imagens/produtos_alta_resolucao/' + codNome + '.jpg'">
+        <img class="img-logo col-5 position-absolute" [src]="'assets/imagens/fornecedores/logo-media/'+ codFornecedor +'.png'">
+    </div>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th>COD</th>
+                <th>DESCRIÇÃO</th>
+                <th>EMB</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let produtos of produtosDescricao">
+                <tr *ngIf="produtos.cod_nome == codNome ">
+                    <td scope="row">{{produtos.id}}</td>
+                    <td>{{produtos.descricao}}</td>
+                    <td>{{produtos.embalagem}}{{produtos.unidade}}</td>
+                </tr>
+            </ng-container>
+
+        </tbody>
+    </table>
+</div>

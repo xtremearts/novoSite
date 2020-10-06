@@ -1,0 +1,44 @@
+<app-titulo-paginas [tituloPaginas]="tituloPaginas" [corTitulo]="corTitulo" [corTituloSvg]="corTituloSvg">
+</app-titulo-paginas>
+
+<div class="container-fluid div-fundo">
+    <div class="col-10 row fornecedores align-items-center mb-5 justify-content-between">
+        <div class="div-cinza"></div>
+        <div class="col-4 exclusivos">
+            <img class="mb-3" src="assets/imagens/icone-estrela.svg">
+            <h3 class="mb-3">FORNECEDORES <br> EXCLUSIVOS</h3>
+            <p class="p-principal mb-3">Fornecedores que você só vai encontrar na Nova Casa</p>
+            <p class="p-informativo">Em alguns casos a exclusividade não é estendida para todas as regiões</p>
+        </div>
+        <div class="col-7 row align-items-center">
+            <ul class="row logo-fornecedores align-items-center">
+                <ng-container *ngFor="let fornecedor of fornecedores.fornecedoresAPI">
+                    <li class="col-3 ml-4 mb-4" *ngIf="fornecedor.status == 'E'">
+                        <img class="img-fluid" [src]="'assets/imagens/fornecedores/logo-grande/'+fornecedor.cod_fornecedor+'.png'">
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-10 row fornecedores align-items-center justify-content-between">
+        <div class="div-cinza2"></div>
+        <div class="col-7 row align-items-center">
+            <ul class="row logo-fornecedores align-items-center">
+                <ng-container *ngFor="let fornecedor of fornecedores.fornecedoresAPI">
+                    <li class="col-3 ml-4 mb-4" *ngIf="fornecedor.status == 'E'">
+                        <img class="img-fluid" [src]="'assets/imagens/fornecedores/logo-grande/'+fornecedor.cod_fornecedor+'.png'">
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+        <div class="col-4 row fornecedores">
+            <div class="col exclusivos">
+                <img class="mb-3" src="assets/imagens/icone-parceiros.svg">
+                <h3 class="mb-3">FORNECEDORES <br> PARCEIROS</h3>
+                <p class="p-principal mb-3">Fornecedores com as melhores condições do mercado</p>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+}
+
+footer{
+    margin-top: 2em;
+    background-color: #50992A;
+    border-top: solid yellow 5px;
+}
+
+.footer-linha-final{
+    text-align: center;
+    color: white;
+    background-color: #477320;
+}
+
+.footer2{
+    margin: 0 auto;
+    padding: 1em 0;
+}
+
+.logo{
+    text-align: center;
+}
+
+.logo img{
+    margin-top: 2em;
+}
+
+.produtos ul{
+    column-count: 2;
+}
+
+li{
+    font-size: 17px;
+    margin-left: 0.5em;
+}
+
+h5{
+    font-size: 30px;
+    color: yellow;
+    border-bottom: 1px solid yellow;
+    font-weight: 300;
+    margin-bottom: 0.3em;
+}
+
+h6{
+    font-size: 29.37px;
+    margin-top: 1em;
+}
+
+.footer-linha-final{
+    font-size: 15px;
+    padding: 0.5em;
+}

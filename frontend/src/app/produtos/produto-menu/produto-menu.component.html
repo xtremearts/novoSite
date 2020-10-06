@@ -1,0 +1,25 @@
+<!-- <div class="col menu-produto2"> -->
+    <ng-container *ngFor="let linha of linhas.linhasAPI; index as i">
+        <ng-container *ngIf='!linhas.linhaAtiva || linhas.linhaAtiva == linha.id'>
+            <ul class="ul-menu-produto" [ngClass]="'cor-bg-linha-'+linha.id">
+                <div class="row" (click)='linhas.mudarEstadoLinha(i)'>
+                    <h3 class="col" [ngClass]="linhas.paginaAtiva == true ?'h3-lista': false">{{linha.nome}}</h3>
+                    <img [ngClass]="linha.id == linhas.linhaClicado ? 'rodarSeta': false" class="seta-menu"
+                        src="assets/imagens/seta-menu.svg">
+                </div>
+                <ng-container *ngFor="let grupo of linhas.gruposAPI">
+                    <div class="div-menu-produto" *ngIf="grupo.idLinha == linhas.linhaClicado && linhas.linhasAPI[i].id == linhas.linhaClicado">
+                        <li class="li-menu-produto" [ngClass]="linha.cor">
+                            <a [routerLink]="['/produtos/', grupo.idLinha, grupo.id]">
+                                <h4>
+                                    <img src="assets/imagens/marcador-preto.svg">
+                                    {{grupo.grupo}}
+                                </h4>
+                            </a>
+                        </li>
+                    </div>
+                </ng-container>
+            </ul>
+        </ng-container>
+    </ng-container>
+<!-- </div> -->

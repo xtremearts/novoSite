@@ -1,0 +1,22 @@
+<!-- <div @myInsertRemoveTrigger class="open-close-container">
+  <p>ESSE É UM TESTE DE ANIMAÇÃO</p>
+  <button>Botão inicial</button>
+</div> -->
+<ngb-carousel #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
+  <ng-template ngbSlide *ngFor="let img of images; index as i">
+    <a class="row" href="" target="_blank" rel="nofollow noopener noreferrer">
+      <div class="picsum-img-wrapper">
+        <img [src]="img">
+      </div>
+      
+      <div *ngFor="let titulo of titulos; index as i2" class="carousel-caption col-8">
+        <img class="img-destaque-banner" *ngIf="i == i2" src="{{titulo.imgBanner}}">
+        <div *ngIf="i == i2" class="row align-items-end col-5 banner-texto">
+          <h2>{{titulo.titulo}}</h2>
+          <p>{{titulo.subtitulo}}</p>
+          <button class="col-7">SAIBA MAIS</button>
+        </div>
+      </div>
+    </a>
+  </ng-template>
+</ngb-carousel>

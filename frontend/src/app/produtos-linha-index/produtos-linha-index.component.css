@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+}
+
+.produtos-destaque-background{
+    background-color: #E1E1E1;
+    padding-bottom: 4%;
+}
+
+.produtos-li{
+    background-color: white;
+    overflow: hidden;
+}
+
+.carousel-item li{
+    margin-top: 3em;
+    padding: 0 0.5em 0.5em 0.5em;
+    float: left;
+}
+
+.mesclagem-imagem{
+   background-color: #68B626;
+}
+
+.img-produto{
+    mix-blend-mode: luminosity;
+    
+}
+
+
+.produtos-li:hover{
+    box-shadow: 8px 5px 5px #ccc;
+    transition: 0.2s;
+    cursor: pointer;
+    
+}
+
+.produtos-li:hover .img-produto{
+    mix-blend-mode: normal;
+}
+
+.produtos-li:hover h3{
+    font-weight: 700;
+}
+
+h3{
+    font-size: 21px;
+    margin: 0.5em 0;
+    text-align: center;
+    min-height: 50px;
+    color: #707173;
+}
+
+.div-fornecedor{
+    padding-top: 0.5em;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+#carouselExampleIndicators{
+    margin: 0 auto;
+}
+
+.carousel-indicators li{
+    background-color: #68B626;
+}
+
+.carousel-indicators{
+    justify-content: flex-end;
+    bottom: -15%;
+    margin-right: 12.8%;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    width: 20% !important;
+    cursor: pointer;
+    margin-top: 3em;
+}

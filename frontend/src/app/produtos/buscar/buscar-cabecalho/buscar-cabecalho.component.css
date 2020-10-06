@@ -1,0 +1,44 @@
+/*------------------------------------------------ BOTÕES ---------------------------------------------- */
+button{
+    margin-left: 1em;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: white;
+}
+
+button img {
+    margin-right: 0.2em;
+}
+
+.lancamentos{
+    border: solid 2px #D7214F;
+    color: #D7214F;
+}
+
+.lancamentos:hover{
+    background-color: #D7214F;
+}
+
+.destaque{
+    border: solid 2px #992A2A;
+    color: #992A2A;
+}
+
+.destaque:hover{
+    background-color: #992A2A;
+}
+
+.fornecedores{
+    border: solid 2px #4821D7;
+    color: #4821D7;
+}
+
+.fornecedores:hover{
+    background-color: #4821D7 ;
+}
+
+button:hover {
+    color: white;
+    transition: 0.2s;
+}
+/* --------------------------------------------------------- */

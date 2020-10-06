@@ -1,0 +1,41 @@
+<app-titulo-paginas [tituloPaginas]="tituloPaginas" [corTitulo] = "corTitulo" [corTituloSvg] = "corTituloSvg"></app-titulo-paginas>
+
+<div class="container-fluid produtos-destaque-background">
+
+    
+    <div id="carouselLinhaIndex" class="carousel slide col-12" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselLinhaIndex" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselLinhaIndex" data-slide-to="1"></li>
+        </ol>
+        <div class="col-9 carousel-inner div-fornecedor">
+            <div class="carousel-item active">
+                <li class="col-2" *ngFor='let produtos of produto'>
+                    <div class="col produtos-li">
+                        <h3>{{produtos.linha}}</h3>
+                        <div class="mesclagem-imagem">
+                            <img class="img-fluid img-produto" src='{{produtos.img}}'>
+                        </div>
+                    </div>
+                </li>
+            </div>
+
+            <div class="carousel-item">
+                <li class="col-2" *ngFor='let produtos of produto'>
+                    <div class="col produtos-li">
+                        <h3>{{produtos.linha}}</h3>
+                        <div class="mesclagem-imagem">
+                            <img class="img-fluid img-produto" src='{{produtos.img}}'>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselLinhaIndex" role="button" data-slide="prev">
+            <span class="" aria-hidden="true"><img src="assets/imagens/seta_esquerda_linha.svg"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselLinhaIndex" role="button" data-slide="next">
+            <span class="" aria-hidden="true"><img src="assets/imagens/seta_direita_linha.svg"></span>
+        </a>
+    </div>

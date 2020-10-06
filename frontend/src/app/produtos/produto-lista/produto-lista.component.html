@@ -1,0 +1,53 @@
+
+<app-titulo-paginas [tituloPaginas]="tituloPaginas" [corTitulo]="corTitulo" [corTituloSvg]="corTituloSvg">
+</app-titulo-paginas>
+
+<div id="bg-branco"></div>
+<div class="container-fluid mt-5">
+    <div id="incluir-div" class="col-10 div-listar-produtos"  >
+        <div class="row">
+            <app-produto-menu class="col"></app-produto-menu>
+            <app-buscar class="col"></app-buscar>
+        </div>
+     
+        <div class="pl-5 pr-5 mt-4 mb-3 row align-items-center justify-content-between">
+            <div class="row">
+                <img src="assets/imagens/seta-navegacao.svg" class="mr-2">
+                <h6 class="mr-2">{{linhas.linhasAPIClicada.linha}}</h6>
+
+                <img src="assets/imagens/seta-navegacao.svg" class="mr-2">
+                <h6 class="mr-2"> {{linhas.gruposAPIClicada.grupo}}</h6>
+            </div>
+
+            <div class="row">
+                <ng-container *ngIf="linhas.subGruposAPI.length > 1">
+                    <ng-container *ngFor="let subgrupo of linhas.subGruposAPI; index as i">
+                        <h6 *ngIf="i != 0" class="mr-2 ml-2"> | </h6>
+                        <a (click)="linhas.ativarSubgrupo(subgrupo.id)">
+                            <h6 [ngClass]="linhas.subGrupoAtivo == subgrupo.id ?'subgrupo-selecionado': false">{{subgrupo.subgrupo}}</h6>
+                        </a>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="row lista-produtos pl-4 pr-4">
+            <ng-container *ngFor="let produto of produtos.produtosNomeApi; index as i">
+                <a *ngIf="linhas.subGrupoAtivo == produto.cod_subgrupo|| linhas.subGrupoAtivo  == 0"
+                    [id]='produto.id'
+                    (click)='produtos.indexClicado(produto.cod_index);
+                    produtos.exibirModal()'
+                    class="col-3 link-produto-unico"
+                    [routerLink]="produto.id" >
+
+                    <app-produto-unico
+                        [nome]="produto.nome"
+                        [fornecedor]="produto.fornecedor"
+                        [codFornecedor]="produto.cod_fornecedor"
+                        [id]="produto.id">
+                    </app-produto-unico>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+</div>

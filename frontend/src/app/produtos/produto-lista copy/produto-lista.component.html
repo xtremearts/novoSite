@@ -1,0 +1,55 @@
+<app-titulo-paginas [tituloPaginas]="tituloPaginas" [corTitulo]="corTitulo" [corTituloSvg]="corTituloSvg">
+</app-titulo-paginas>
+<div class="container-fluid mt-5">
+    <div class="col-10 div-listar-produtos">
+        <div class="row">
+            <app-produto-menu class="col"></app-produto-menu>
+            <app-buscar class="col"></app-buscar>
+        </div>
+        <div class="row">
+            <ng-container *ngFor="let linha of linhas.linhasAPI; index as i">
+                <ng-container *ngIf="linhas.linhasAPI[i].codLinha == linhas.linhaAtiva">
+                    <ul class="link-navegacao row">
+                        <ng-container>
+                            <img src="assets/imagens/seta-navegacao.svg">
+                            <h6>{{linha.nome}}</h6>
+                        </ng-container>
+                        <ng-container>
+                            <img src="assets/imagens/seta-navegacao.svg">
+                            <h6>{{linha.nome}}</h6>
+                        </ng-container>
+                    </ul>
+                </ng-container>
+            </ng-container>
+        </div>
+
+        <div class="pl-5 pr-5 mt-4 mb-3 row align-items-center justify-content-between">
+            <div class="row">
+                <img src="assets/imagens/seta-navegacao.svg" class="mr-2">
+                <h6 class="mr-2">{{linhas.linhasAPIClicada.nome}}</h6>
+                <img src="assets/imagens/seta-navegacao.svg" class="mr-2">
+                <h6> {{linhas.gruposAPIClicada.grupo}}</h6>
+            </div>
+
+            <div class="row ">
+                <!-- <h6 class="veja-mais ml-2 mr-2" [ngClass]="'cor-linha-' + linhas.linhasAPIClicada.id">VEJA MAIS {{linhas.gruposAPIClicada.grupo}}:</h6> -->
+                <ng-container *ngFor="let subgrupo of linhas.subGruposAPI; index as i">
+                    <h6 *ngIf="i != 0" class="mr-2 ml-2"> | </h6>
+                    <a href="*">
+                        <h6>{{subgrupo.subgrupo}}</h6>
+                    </a>
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="list-group">
+        </div>
+        <div class="row lista-produtos pl-4 pr-4">
+            <ng-container *ngFor="let produto of produtos.produtosNomeApi; index as i">
+                <a [id]='produto.id' (click)='produtos.indexClicado(produto.cod_index)' class="col-3 link-produto-unico" [routerLink]="produto.id" >
+                    <app-produto-unico [nome]="produto.nome" [codFornecedor]="produto.cod_fornecedor" [id]="produto.id"></app-produto-unico>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+</div>

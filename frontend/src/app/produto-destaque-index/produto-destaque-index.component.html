@@ -1,0 +1,79 @@
+<app-titulo-paginas [tituloPaginas]="tituloPaginas" [corTitulo]="corTitulo" [corTituloSvg]="corTituloSvg">
+</app-titulo-paginas>
+
+<div class="container-fluid produtos-destaque-background">
+  <div class="row justify-content-md-center ">
+    <div class="col-12">
+      <ngb-carousel class="pt-5 pb-5">
+        <ng-template ngbSlide *ngFor="let slide of [0, 1, 2, 3]; index as i2">
+          <div class="row justify-content-md-center">
+            <div class="col-9">
+              <div class="row">
+                <ng-container *ngFor="let produto of produtos.produtosLancamentosIndexApi; index as i; count as qtd">
+
+                  <app-produto-unico *ngIf="(i == 0 ||i == 1 ||i == 2 ||i == 3) && i2==0" [nome]="produto.nome" class="col-3 p-2"
+                    [fornecedor]="produto.fornecedor" [codFornecedor]="produto.cod_fornecedor" [id]="produto.id">
+                  </app-produto-unico>
+
+                  <app-produto-unico *ngIf="(i == 4 ||i == 5 ||i == 6 ||i == 7) && i2==1" [nome]="produto.nome" class="col-3 p-2"
+                    [fornecedor]="produto.fornecedor" [codFornecedor]="produto.cod_fornecedor" [id]="produto.id">
+                  </app-produto-unico>
+
+                  <app-produto-unico *ngIf="(i == 8 ||i == 9 ||i == 10 ||i == 11) && i2==2" [nome]="produto.nome" class="col-3 p-2"
+                    [fornecedor]="produto.fornecedor" [codFornecedor]="produto.cod_fornecedor" [id]="produto.id">
+                  </app-produto-unico>
+
+                  <app-produto-unico *ngIf="(i == 12 ||i == 13 ||i == 14 ||i == 15) && i2==3" [nome]="produto.nome" class="col-3 p-2"
+                    [fornecedor]="produto.fornecedor" [codFornecedor]="produto.cod_fornecedor" [id]="produto.id">
+                  </app-produto-unico>
+
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+
+  <!-- <div id="carouselExampleIndicators" class="carousel slide col-12" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    </ol>
+    <div class="col-9 carousel-inner div-fornecedor">
+      <div class="carousel-item active">
+        <li class="col-3" *ngFor='let produtos of produto'>
+          <div class="col produtos-li">
+            <img class="img-fluid" src='{{produtos.img}}'>
+            <h3>{{produtos.nome}}</h3>
+            <div class="align-items-center position-relative div-fornecedor-logo">
+              <h4>{{produtos.fornecedor}}</h4>
+              <img class="img-fornecedor img-fluid col-4" src='{{produtos.cod_fornecedor}}'>
+            </div>
+          </div>
+        </li>
+      </div>
+
+      <div class="carousel-item">
+        <li class="col-3" *ngFor='let produtos of produto'>
+          <div class="col produtos-li">
+            <img class="img-fluid" src='{{produtos.img}}'>
+            <h3>{{produtos.nome}}</h3>
+            <div class="align-items-center position-relative div-fornecedor-logo">
+              <h4>{{produtos.fornecedor}}</h4>
+              <img class="img-fornecedor img-fluid col-4" src='{{produtos.cod_fornecedor}}'>
+            </div>
+          </div>
+        </li>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="" aria-hidden="true"><img src="assets/imagens/seta_esquerda_destaque.svg"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="" aria-hidden="true"><img src="assets/imagens/seta_direita_destaque.svg"></span>
+    </a>
+  </div> -->
+</div>

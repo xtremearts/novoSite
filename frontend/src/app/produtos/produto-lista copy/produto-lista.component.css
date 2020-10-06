@@ -1,0 +1,34 @@
+
+.div-listar-produtos{
+    margin: 0 auto;
+}
+
+
+
+.link-produto-unico{
+  padding: 0.5em;
+  text-decoration: none;
+  color: #808080;
+  
+}
+
+app-produto-unico{
+  /* padding: 0.5em; */
+  
+}
+
+h6{
+  font-size: 18.66px;
+  font-style: italic;
+  color: #808080;
+  margin: 0;
+  padding: 0;
+}
+
+.veja-mais{
+  font-weight: 600;
+}
+
+app-buscar{
+  margin-left: 0;;
+}

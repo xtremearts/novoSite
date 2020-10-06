@@ -1,0 +1,49 @@
+a{
+  cursor: pointer;
+}
+.div-listar-produtos{
+    margin: 0 auto;
+}
+
+
+h6{
+  font-size: 18.66px;
+  font-style: italic;
+  color: #808080;
+  margin: 0;
+  padding: 0;
+}
+
+.subgrupo-selecionado{
+  font-weight: 600;
+  color:#68B626;
+  text-decoration: underline;
+}
+
+.veja-mais{
+  font-weight: 600;
+}
+
+app-buscar{
+  margin-left: 0;
+}
+
+
+app-produto-menu{
+  z-index: 999;
+}
+
+
+#bg-branco{
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  position: absolute;
+  border: solid red 1px;
+}
+
+.bg-branco{
+  z-index: 998;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}

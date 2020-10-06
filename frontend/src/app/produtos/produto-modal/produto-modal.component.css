@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.corpo-produto{
+    padding: 1em;
+}
+
+h1{
+    font-size: 33px;
+    padding-bottom: 0.3em;
+}
+
+.produtos-semelhantes{
+    background-color: #E1E1E1;
+    padding: 1em;
+}
+
+h3{
+    margin: 0.4em 0;
+    font-size: 30px;
+}
+
+.imagem-produto{
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    /* bottom: 2; */
+    top: 1em;
+    left: 1em;
+    z-index: 999;
+}

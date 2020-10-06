@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="filiais">
+
+        <div class="filial col-12 mb-5" *ngFor="let filial of filiais">
+            <div class="div-cinza"></div>
+            <!-- <div class="div-verde"></div> -->
+            <div class="col-10 conteudo-filial justify-content-md-center">
+                <div class="col-12 mb-2">
+                    <h2>{{filial.filial}}</h2>
+                </div>
+
+                <div class="row col conteudo-filial ml-a mr-a">
+                    <div class="col-5 mr-4">
+                        <img class="col" [src]="filial.imagemFilial">
+                        <div class="endereco mt-3 mb-3">
+                            <h4>Endereço:</h4>
+                            <p>{{filial.endereco}}</p>
+                        </div>
+                        <div class="telefone">
+                            <h4>Telefone:</h4>
+                            <p>{{filial.telefone}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col mapa">
+                        <ng-template *ngIf="filial.id==4 then mapaFilial4"></ng-template>
+                        <ng-template *ngIf="filial.id==12 then mapaFilial12"></ng-template>
+                        <ng-template *ngIf="filial.id==2 then mapaFilial2"></ng-template>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<ng-template #mapaFilial2>
+    <iframe class="col"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.433957691996!2d-47.96768498514186!3d-16.042955288897197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935986f4b14a254d%3A0x9a78c4f4601bb60e!2sNova%20Casa%20Distribuidora%20DF%20(Matriz)!5e0!3m2!1spt-BR!2sbr!4v1590613590342!5m2!1spt-BR!2sbr">
+    </iframe>
+</ng-template>
+
+<ng-template #mapaFilial4>
+    <iframe class="col"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1911.438829044456!2d-49.2024426917852!3d-16.632908127151563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935eed8cd3aca84f%3A0xa68f77707706a995!2sNova%20Casa%20Distribuidora%20Goi%C3%A2nia!5e0!3m2!1spt-BR!2sbr!4v1590613651894!5m2!1spt-BR!2sbr">
+    </iframe>
+</ng-template>
+
+<ng-template #mapaFilial12>
+    <iframe class="col"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1876.168358033239!2d-44.03314944127808!3d-19.86799889999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa693e8dbc5e87d%3A0x7457b787ef76e443!2sNova%20Casa%20Distribuidora%20Minas%20Gerais!5e0!3m2!1spt-BR!2sbr!4v1590613692992!5m2!1spt-BR!2sbr">
+    </iframe>
+</ng-template>

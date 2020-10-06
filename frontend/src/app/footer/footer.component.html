@@ -1,0 +1,38 @@
+<footer class="container-fluid">
+    <div class="col-10 footer2">
+        <div class="row">
+            <div class="logo col-4 ">
+                <img src="assets/imagens/logo_rodape.svg">
+                <h6>SAC: (61) 3025-9553</h6>
+            </div>
+            <div class="institucional col-">
+                <h5>INSTITUCIONAL</h5>
+                <ul>
+                    <li *ngFor='let pagina of paginas'>
+                        <a href="{{pagina.link}}">
+                            <img src="assets/imagens/marcador_rodape.svg">
+                            {{pagina.nome}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="espacamento col-1">
+
+            </div>
+            <div class="produtos col-5">
+                <h5>PRODUTOS</h5>
+                <ul>
+                    <li *ngFor='let linha of linhas.linhasAPI'>
+                        <a href="*">
+                            <img src="assets/imagens/marcador_rodape.svg">
+                            {{linha.nome}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row footer-linha-final justify-content-center">
+        <p>2020 - Nova Casa Distribuidora de Materiais para Construção S/A - Todos os direitos reservados</p>
+    </div>
+</footer>

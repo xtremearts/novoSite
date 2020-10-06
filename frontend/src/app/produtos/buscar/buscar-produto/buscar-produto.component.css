@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a {
+    padding: 0.5em;
+}
+
+.corpo{
+    margin: 0 auto;
+}
+
+
+.div-icones-topo{
+    margin: 0 auto;
+    padding: 0 1.5em;
+}

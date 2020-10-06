@@ -1,0 +1,30 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+/* @font-face {
+    font-family: 'riffic_freebold';
+    src: url('assets/fonts/rifficfree-bold-webfont.woff2') format('woff2'),
+         url('assets/fonts/rifficfree-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+h1{
+
+    /* font-family: 'riffic_freebold'; */
+    color: white;
+    font-size: 60px;
+    
+}
+
+.fundo{
+    background-color: #509d2a;
+    /* width: 750px; */
+}
+
+.fundo-produtos{
+    background-color: white;
+}

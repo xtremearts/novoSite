@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
+body{
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #E1E1E1;
+}
+
+
+
+
+/* -----------------------------FORÇANDO CSS BANNER ------------------------------------------------ */
+.carousel-indicators{
+    justify-content: flex-end;
+    margin-right: 4%;
+}
+
+.carousel-control-prev-icon{
+    background-blend-mode: multiply;
+    background-image: url('assets/imagens/botao_acao_slider_prev.svg');
+}
+
+.carousel-control-next-icon{
+    background-blend-mode: multiply;
+    background-image: url('assets/imagens/botao_acao_slider_next.svg');
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.carousel-indicators li{
+    border-radius: 50%;
+    background-color: #aaa;
+    width: 15px;
+    height: 15px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------CORES---------------------------------------------- */
+
+.produto-destaque{
+    background-color: #992A2A;
+}
+
+.produto-destaque-svg{
+    fill: #992A2A;
+}
+
+.produto-linha{
+    background-color: #68B626;
+}
+
+.produto-linha-svg{
+    fill: #68B626;
+}
+
+
+
+/* -------------------- */
+
+.cor-linha-1{
+    color: #F99C12 !important;
+}
+
+.cor-linha-2{
+    color: #0976B8 !important;
+}
+
+.cor-linha-3{
+    color: #303188 !important;
+}
+
+.cor-linha-4{
+    color: #B81A88 !important;
+}
+
+.cor-linha-5{
+    color: #9D5E23 !important;
+}
+
+.cor-linha-6{
+    color: #B45027 !important;
+}
+
+.cor-linha-7 {
+    color: #32AF4A !important;
+}
+
+.cor-linha-8{
+    color: #00B4B1 !important;
+}
+
+.cor-linha-9{
+    color: #89B93F !important;
+}
+
+.cor-linha-10{
+    color: #C83333 !important;
+}
+
+.cor-linha-11{
+    color: #DD8226 !important;
+}
+
+.cor-linha-12{
+    color: #BDB13A !important;
+}
+
+.cor-linha-13{
+    color: #6F2C8C !important;
+}
+
+.cor-linha-14{
+    color: #BA204B !important;
+}
+
+.cor-linha-15{
+    color: #FFB81F !important;
+}
+
+.cor-linha-16{
+    color: #0AC189 !important;
+}
+
+.cor-linha-17{
+    color: #A219BD !important;
+}
+
+.cor-linha-18{
+    color: black !important;
+}
+
+.cor-linha-19{
+    color: #AA7A20 !important;
+}
+
+.cor-linha-20{
+    color: #0F8FB2 !important;
+}
+
+/*  */
+.cor-bg-linha-1{
+    background-color: #F99C12 !important;
+}
+
+.cor-bg-linha-2{
+    background-color: #0976B8 !important;
+}
+
+.cor-bg-linha-3{
+    background-color: #303188 !important;
+}
+
+.cor-bg-linha-4{
+    background-color: #B81A88 !important;
+}
+
+.cor-bg-linha-5{
+    background-color: #9D5E23 !important;
+}
+
+.cor-bg-linha-6{
+    background-color: #B45027 !important;
+}
+
+.cor-bg-linha-7 {
+    background-color: #32AF4A !important;
+}
+
+.cor-bg-linha-8{
+    background-color: #00B4B1 !important;
+}
+
+.cor-bg-linha-9{
+    background-color: #89B93F !important;
+}
+
+.cor-bg-linha-10{
+    background-color: #C83333 !important;
+}
+
+.cor-bg-linha-11{
+    background-color: #DD8226 !important;
+}
+
+.cor-bg-linha-12{
+    background-color: #BDB13A !important;
+}
+
+.cor-bg-linha-13{
+    background-color: #6F2C8C !important;
+}
+
+.cor-bg-linha-14{
+    background-color: #BA204B !important;
+}
+
+.cor-bg-linha-15{
+    background-color: #FFB81F !important;
+}
+
+.cor-bg-linha-16{
+    background-color: #0AC189 !important;
+}
+
+.cor-bg-linha-17{
+    background-color: #A219BD !important;
+}
+
+.cor-bg-linha-18{
+    background-color: black !important;
+}
+
+.cor-bg-linha-19{
+    background-color: #AA7A20 !important;
+}
+
+.cor-bg-linha-20{
+    background-color: #0F8FB2 !important;
+}
+/* --------------------------------------------------------------------- */
+
+.modal-xl{
+    max-width: 85%;
+}
+
+.link-produto-unico{
+  padding: 0.5em;
+  text-decoration: none;
+  color: #808080;
+
+}

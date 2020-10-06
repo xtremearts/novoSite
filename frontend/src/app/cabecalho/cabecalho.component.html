@@ -1,0 +1,28 @@
+<header class="container-fluid">
+    <div class="row div-header">
+        <a [routerLink]="'/'">
+            <img class="logo" src="assets/imagens/logo.svg" alt="logo nova casa">
+        </a>
+
+        <div class="header-outros-regiao col-7">
+            <ul id='header-outros-contatos'>
+                <li class="" *ngFor="let outroContato of outrosContatos">{{outroContato.nome}}</li>
+            </ul>
+            <form id="header-regiao-atendida">
+                <label class="mr-2">VOCÊ ESTÁ EM:</label>
+                <select>
+                    <option *ngFor="let regiaoAtendida of regioesAtendidas">{{regiaoAtendida.nome}}</option>
+                </select>
+            </form>
+        </div>
+
+        <ul id="header-menu" class="">
+            <li class="" *ngFor="let menu of menuLista">
+                <a [routerLink]='menu.link'>
+                    <img class="icone-menu" src="{{menu.linkImg}}" alt="{{menu.nome}}">
+                    <h1>{{menu.nome}}</h1>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>

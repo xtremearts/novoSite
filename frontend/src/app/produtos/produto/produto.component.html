@@ -1,0 +1,20 @@
+<app-titulo-paginas [tituloPaginas]="tituloPaginas" [corTitulo]="corTitulo" [corTituloSvg]="corTituloSvg">
+</app-titulo-paginas>
+<div class="container-fluid mt-5">
+    <div class="div-icones-topo col-10">
+        <app-buscar-cabecalho></app-buscar-cabecalho>
+    </div>
+    <div class="col-10 menu-produto">
+        <div class="row">
+            <app-produto-menu class="col-6"></app-produto-menu>
+            <div class="col-6">
+                <div class="h-100" *ngIf="linhas.linhaClicado != 0; else blocoElse">
+                    <img class="imagem-linha" src="assets/imagens/img-linhas/{{linhas.linhaClicado}}.jpg">
+                </div>
+                <ng-template #blocoElse>
+                    <img class="imagem-linha" src="assets/imagens/img-linhas/{{linhas.linhasAPI[0].id}}.jpg">
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>

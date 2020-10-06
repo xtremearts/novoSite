@@ -1,0 +1,15 @@
+<div class="container-fluid filiais-index">
+    <div class="row">
+        <ul class="col-4" *ngFor="let filial of filiais">
+            <li>
+                <img class="img-filial" src="{{filial.img}}">
+                <h3>{{filial.nome}}</h3>
+                <ul>
+                    <li *ngFor="let atributo of filial.atributos"><img class="mr-1" src="assets/imagens/checkFilial.svg">{{atributo}}</li>
+                </ul>
+                <a>
+                    <button class="col-7 mt-4">SAIBA MAIS</button>
+                </a>
+        </ul>
+    </div>
+</div>

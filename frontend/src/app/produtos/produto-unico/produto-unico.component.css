@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.ul-produto-unico{
+    margin: 0;
+    
+}
+
+.produtos-li{
+    
+    background-color: white;
+    padding: 0 1em 0em 1em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.produtos-li:hover{
+    box-shadow: 8px 5px 5px #ccc;
+    transition: 0.2s;
+}
+
+h3{
+    font-size: 20px;
+    margin: 0.5em 0 0.2em 0;
+    text-align: center;
+}
+
+h4{
+    font-size: 17.2px;
+    float: left;
+    line-height: 2.5em;
+    font-style: italic;
+    color: #4D4D4D;
+    line-height: 55px;
+}
+
+.img-fornecedor{
+    float: right;
+    margin-bottom: 1em;
+    /* margin-top: 1em; */
+}
+
+.div-nome-produto{
+    min-height: 72px;
+}
+
+.div-fornecedor-logo{
+    padding-top: 0.2em;
+    border-top: solid #aeaeae 1px;
+}
